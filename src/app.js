@@ -1,12 +1,12 @@
 async function getRecipes() {
-    const response = await fetch('http://localhost:3030/jsonstore/cookbook/recipes');
+    const response = await fetch('http://localhost:3030/data/recipes');
     const recipes = await response.json();
 
     return Object.values(recipes);
 }
 
 async function getRecipeById(id) {
-    const response = await fetch('http://localhost:3030/jsonstore/cookbook/details/' + id);
+    const response = await fetch('http://localhost:3030/data/recipes/' + id);
     const recipe = await response.json();
 
     return recipe;
@@ -48,12 +48,12 @@ function createRecipeCard(recipe) {
 
 window.addEventListener('load', async () => {
     const main = document.querySelector('main');
-
     const recipes = await getRecipes();
     const cards = recipes.map(createRecipePreview);
 
     main.innerHTML = '';
     cards.forEach(c => main.appendChild(c));
+    navBarAuth();
 });
 
 function e(type, attributes, ...content) {
@@ -80,3 +80,16 @@ function e(type, attributes, ...content) {
 
     return result;
 }
+function navBarAuth() {
+
+    const userNav =  document.getElementById('user');
+    const guestNav =  document.getElementById('guest');
+
+    const accessToken = sessionStorage.getItem('accessToken');
+    if (accessToken === null){
+        guestNav.style.display = 'inline-block';
+    }else{
+        userNav.style.display = 'inline-block'
+    }
+}
+
