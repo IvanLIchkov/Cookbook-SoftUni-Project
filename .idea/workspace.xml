@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Implement authentication and authorization of adding new recipes to cookbook collection." />
+    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Implement authentication and authorization of adding new recipes to cookbook collection.">
+      <change afterPath="$PROJECT_DIR$/src/loadHome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/createHtmlElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/demoApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.bat" beforeDir="false" afterPath="$PROJECT_DIR$/server.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createRecepie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createRecipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/recipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/recipe.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,27 +55,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Batch.server.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.example.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.login.js.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/SoftUni Repos/Cookbook-SoftUni-Project/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;zielu.gittoolbox.app.config.v2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Batch.server.executor": "Run",
+    "JavaScript Debug.example.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Debug",
+    "JavaScript Debug.register.html.executor": "Run",
+    "Node.js.login.js.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.last.introduce.type": "CONST",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/SoftUni Repos/JS-Applications/softuni-practice-server-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "zielu.gittoolbox.app.config.v2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project\static" />
@@ -131,9 +145,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Batch.server" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.login.html" />
         <item itemvalue="Node.js.login.js" />
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.register.html" />
       </list>
     </recent_temporary>
@@ -157,6 +171,8 @@
       <workItem from="1713124994878" duration="444000" />
       <workItem from="1713125451497" duration="281000" />
       <workItem from="1713154494578" duration="9886000" />
+      <workItem from="1713169263615" duration="30000" />
+      <workItem from="1713367981838" duration="15251000" />
     </task>
     <task id="LOCAL-00001" summary="Implement authentication and authorization of adding new recipes to cookbook collection.">
       <option name="closed" value="true" />

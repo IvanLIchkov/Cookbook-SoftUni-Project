@@ -3,31 +3,135 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Cookbook</title>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" type="text/css">
+	
+	<title>My Cookbook</title>
     <link rel="stylesheet" href="static/site.css">
     <link rel="stylesheet" href="static/recipe.css">
-    <script src="/src/app.js"></script>
-    <script src="/src/login.js"></script>
+	<link rel="stylesheet" href="static/form.css">
+	<script src="./src/app.js" type="module"></script>
+    <script src="./src/loadHome.js" type="module"></script>
+    <script src="./src/login.js" type="module"></script>
+	<script src="./src/register.js" type="module"></script>
+	<script src="./src/createRecipe.js" type="module"></script>
 </head>
 
 <body>
-    <header>
-        <h1>My Cookbook</h1>
-        <nav>
-            <a class="active">Catalog</a>
-            <div id="user">
-                <a href="create.html">Create Recipe</a>
-                <a id="logoutBtn" href="javascript:logOut()">Logout</a>
-            </div>
-            <div id="guest">
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <p style="color: white">Loading...</p>
-    </main>
+<header>
+	<h1>My Cookbook</h1>
+	<nav>
+		<a>Catalog</a>
+		<div id="user">
+			<a href="#">Create Recipe</a>
+			<a id="logoutBtn" href="#">Logout</a>
+		</div>
+		<div id="guest">
+			<a href="#">Login</a>
+			<a href="#">Register</a>
+		</div>
+	</nav>
+</header>
+<main>
+	<section id="home">
+		<main>
+			<p style="color: white">Loading...</p>
+		</main>
+	</section>
+	
+	<section id="createRecipe">
+		<main>
+			<article>
+				<h2>New Recipe</h2>
+				<form>
+					<label>Name: <input type="text" name="name" placeholder="Recipe name"></label>
+					<label>Image: <input type="text" name="img" placeholder="Image URL"></label>
+					<label class="ml">Ingredients: <textarea name="ingredients" placeholder="Enter ingredients on separate lines"></textarea></label>
+					<label class="ml">Preparation: <textarea name="steps" placeholder="Enter preparation steps on separate lines"></textarea></label>
+					<input type="submit" value="Create Recipe">
+				</form>
+			</article>
+		</main>
+	</section>
+	<section id="editRecipe">
+		<main>
+			<article>
+				<h2>Edit Recipe</h2>
+				<form>
+					<label>Name: <input type="text" name="name" placeholder="Recipe name"></label>
+					<label>Image: <input type="text" name="img" placeholder="Image URL"></label>
+					<label class="ml">Ingredients: <textarea name="ingredients" placeholder="Enter ingredients on separate lines"></textarea></label>
+					<label class="ml">Preparation: <textarea name="steps" placeholder="Enter preparation steps on separate lines"></textarea></label>
+					<input type="submit" value="Update Recipe">
+				</form>
+			</article>
+		</main>
+	</section>
+	<section id="login">
+		<main>
+			<article>
+				<h2>Login</h2>
+				<form>
+					<label>E-mail: <input type="text" name="email"></label>
+					<label>Password: <input type="password" name="password"></label>
+					<input type="submit" value="Login">
+				</form>
+			</article>
+		</main>
+	</section>
+	<section id="register">
+		<main>
+			<article>
+				<h2>Register</h2>
+				<form>
+					<label>E-mail: <input type="text" name="email"></label>
+					<label>Password: <input type="password" name="password"></label>
+					<label>Repeat: <input type="password" name="rePass"></label>
+					<input type="submit" value="Register">
+				</form>
+			</article>
+		</main>
+	</section>
+</main>
+
+<section id="showMyRecipes">
+	<main>
+<!--		<article class="preview">-->
+<!--			<div class="title">-->
+<!--				<h2>Title</h2>-->
+<!--			</div>-->
+<!--			<div class="small">-->
+<!--				<img src="assets/lasagna.jpg">-->
+<!--			</div>-->
+<!--		</article>-->
+<!--		-->
+<!--		<article>-->
+<!--			<h2>Title</h2>-->
+<!--			<div class="band">-->
+<!--				<div class="thumb">-->
+<!--					<img src="assets/lasagna.jpg">-->
+<!--				</div>-->
+<!--				<div class="ingredients">-->
+<!--					<h3>Ingredients:</h3>-->
+<!--					<ul>-->
+<!--						<li>Ingredient 1</li>-->
+<!--						<li>Ingredient 2</li>-->
+<!--						<li>Ingredient 3</li>-->
+<!--						<li>Ingredient 4</li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="description">-->
+<!--				<h3>Preparation:</h3>-->
+<!--				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, quaerat.</p>-->
+<!--				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur officia ipsam nulla vitae nobis-->
+<!--					reprehenderit pariatur aut dolor exercitationem impedit.</p>-->
+<!--				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem odit officiis numquam-->
+<!--					corrupti? Quam.</p>-->
+<!--			</div>-->
+<!--		</article>-->
+	</main>
+</section>
 </body>
 
 </html>

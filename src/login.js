@@ -1,9 +1,12 @@
+import {main} from "./app.js";
+import {loadHome} from './loadHome.js';
 
-window.addEventListener('load', addEvents);
-
-function addEvents(){
-    document.querySelector('form').addEventListener('submit', login);
+const loginSection = document.getElementById('login');
+export function loadLoginEvents() {
+    loginSection.querySelector('form').addEventListener('submit', login);
+    main.replaceChildren(loginSection);
 }
+
 async function login(event){
   event.preventDefault();
     const url = 'http://localhost:3030/users/login';
@@ -27,18 +30,21 @@ async function login(event){
             throw await response.json()
         }
         const data = await response.json();
-        sessionStorage.setItem('accessToken', data.accessToken);
 
-        event.target.reset;
-        window.location.replace('http://localhost:63342/Cookbook-SoftUni-Project/index.html')
+        sessionStorage.setItem('accessToken', data.accessToken);
+        sessionStorage.setItem('userId', data._id);
+
+
+        event.target.reset();
+        loadHome()
     }catch (e){
         alert(e.message)
     }
 
 }
-function logOut() {
+export function logOut() {
     sessionStorage.clear();
-    window.location.replace('http://localhost:63342/Cookbook-SoftUni-Project/index.html')
+    loadHome();
 }
 
 

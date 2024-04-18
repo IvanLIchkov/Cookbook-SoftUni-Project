@@ -1,9 +1,14 @@
-window.addEventListener('load', addEvents);
+import {main} from "./app.js";
+import {loadHome} from "./loadHome.js";
 
-function addEvents(){
-    document.querySelector('form').addEventListener('submit', register);
+const registerSection = document.getElementById('register');
+
+registerSection.querySelector('form').addEventListener('submit', register);
+
+export function loadRegister() {
+    main.replaceChildren(registerSection);
 }
-async function register(event){
+ async function register(event){
     event.preventDefault();
 
     const formData = new FormData(event.target);
@@ -28,7 +33,8 @@ async function register(event){
         }
         const data = await response.json();
         sessionStorage.setItem('accessToken', data.accessToken);
-        window.location.replace('http://localhost:63342/Cookbook-SoftUni-Project/index.html')
+        sessionStorage.setItem('userId', data._id)
+        await loadHome();
     }catch (e){
         alert(e.message)
     }
