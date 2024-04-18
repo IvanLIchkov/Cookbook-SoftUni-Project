@@ -1,5 +1,5 @@
 import {main} from "./app.js";
-import {getRecipeById} from "./loadHome.js";
+import {getRecipeById, loadHome} from "./homeController.js";
 
 const createRecipeSection = document.getElementById('createRecipe');
 const updateRecipeSection = document.getElementById('editRecipe');
@@ -8,6 +8,21 @@ createRecipeSection.querySelector('form').addEventListener('submit', createNewRe
 updateRecipeSection.querySelector('form').addEventListener('submit', updateRecipe)
 export function loadCreateRecipe() {
     main.replaceChildren(createRecipeSection);
+}
+async function createNewRecipe(event) {
+    event.preventDefault();
+
+    const url = 'http://localhost:3030/data/recipes'
+
+    try{
+        const response = await fetch(url, generateOptions(event.target));
+        if (response.ok === false){
+            throw await response.json();
+        }
+        await loadHome()
+    }catch (e){
+        alert(e.message)
+    }
 }
 async function updateRecipe(event) {
     event.preventDefault();
@@ -18,13 +33,12 @@ async function updateRecipe(event) {
         if (response.ok === false){
             throw await response.json();
         }
-        window.location.replace('http://localhost:63342/Cookbook-SoftUni-Project/index.html')
+        await loadHome()
     }catch (e){
         alert(e.message)
     }
     sessionStorage.removeItem('recipeForUpdateId');
 }
-
 export async function insertDataIntoForm(event){
     const recipeIdForEdit = event.target.parentElement.getAttribute('recipe-id');
     const {name, img, ingredients, steps} = await getRecipeById(recipeIdForEdit);
@@ -40,21 +54,23 @@ export async function insertDataIntoForm(event){
     sessionStorage.setItem('recipeForUpdateId', recipeIdForEdit);
 }
 
+export function deleteRecipe(event) {
 
-async function createNewRecipe(event) {
-    event.preventDefault();
+    const recipeId = event.target.parentElement.getAttribute('recipe-id');
+    const url = 'http://localhost:3030/data/recipes/' + recipeId;
 
-    const url = 'http://localhost:3030/data/recipes'
-
-    try{
-        const response = await fetch(url, generateOptions(event.target));
-        if (response.ok === false){
-            throw await response.json();
+    const options = {
+        method: 'delete',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Authorization': `${sessionStorage.getItem('accessToken')}`
         }
-        window.location.replace('http://localhost:63342/Cookbook-SoftUni-Project/index.html')
-    }catch (e){
-        alert(e.message)
-    }
+    };
+
+    const response = fetch(url, options)
+        .then(res => res.json())
+        .then(loadHome)
+        .catch(err => alert(err.message));
 }
 function generateOptions(eventTarget) {
     const formType = eventTarget.querySelector('input[type=submit]').value;

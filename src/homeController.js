@@ -1,7 +1,7 @@
 import {main} from "./app.js";
 import{header} from "./app.js";
 import {createElement} from "../util/createHtmlElement.js";
-import {insertDataIntoForm} from "./createRecipe.js";
+import {deleteRecipe, insertDataIntoForm} from "./recipeController.js";
 
 const homeSection = document.getElementById('showMyRecipes');
 
@@ -69,7 +69,7 @@ async function createRecipeCard(recipe) {
         editBtn.addEventListener('click', insertDataIntoForm);
 
         const deleteBtn = createElement('button',buttonsSection,'<i class="fa-light fa-x"></i> Delete', null, null,null, true);
-
+        deleteBtn.addEventListener('click', deleteRecipe)
     }
     return result;
 }

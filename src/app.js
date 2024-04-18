@@ -1,8 +1,8 @@
 
-import {loadLoginEvents, logOut} from "./login.js";
- import {loadHome} from "./loadHome.js";
- import {loadRegister} from "./register.js";
-import {loadCreateRecipe} from "./createRecipe.js";
+import {loadLoginEvents, logOut} from "./authController.js";
+ import {loadHome} from "./homeController.js";
+ import {loadRegister} from "./authController.js";
+import {loadCreateRecipe} from "./recipeController.js";
 
 export const main = document.querySelector('main');
 export const header = document.querySelector('header');
