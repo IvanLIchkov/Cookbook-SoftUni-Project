@@ -4,32 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Some more refactoring and implementing delete recipe functionality.">
-      <change afterPath="$PROJECT_DIR$/.idea/Cookbook-SoftUni-Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/RecipeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/RecipeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/RegisterUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/init/InitDb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/validation/UniqueUserEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/validation/UniqueUserEmailValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/repository/RecipeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/RecipeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Basic implement of spring rest database for SoftUni cookbook project.">
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/CreateRecipeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +102,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Batch.server.executor": "Run",
+    "Batch.server.executor": "Debug",
     "Gradle.Build cookbook-backend.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "Gradle.cookbook-backend.executor": "Run",
@@ -136,7 +117,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CookbookBackendApplication.executor": "Debug",
+    "Spring Boot.CookbookBackendApplication.executor": "Run",
     "git-widget-placeholder": "java-spring-backend",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
@@ -170,7 +151,7 @@
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
     </key>
   </component>
-  <component name="RunManager" selected="Batch.server">
+  <component name="RunManager" selected="Spring Boot.CookbookBackendApplication">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -253,8 +234,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Batch.server" />
         <item itemvalue="Spring Boot.CookbookBackendApplication" />
+        <item itemvalue="Batch.server" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Gradle.cookbook-backend" />
         <item itemvalue="JavaScript Debug.login.html" />
@@ -284,7 +265,8 @@
       <workItem from="1713367981838" duration="18838000" />
       <workItem from="1713462405447" duration="1446000" />
       <workItem from="1713595208796" duration="1397000" />
-      <workItem from="1713598294837" duration="7642000" />
+      <workItem from="1713598294837" duration="15514000" />
+      <workItem from="1713675510730" duration="4505000" />
     </task>
     <task id="LOCAL-00001" summary="Implement authentication and authorization of adding new recipes to cookbook collection.">
       <option name="closed" value="true" />
@@ -318,7 +300,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713463810135</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Basic implement of spring rest database for SoftUni cookbook project.">
+      <option name="closed" value="true" />
+      <created>1713606239507</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713606239507</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Basic implement of spring rest database for SoftUni cookbook project.">
+      <option name="closed" value="true" />
+      <created>1713606245769</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713606245769</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,22 +337,7 @@
     <MESSAGE value="Implement authentication and authorization of adding new recipes to cookbook collection." />
     <MESSAGE value="Refactor html and code to be single page app. Implement edit recipe by authenticated user." />
     <MESSAGE value="Some more refactoring and implementing delete recipe functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some more refactoring and implementing delete recipe functionality." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/RecipeService.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/RecipeService.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Basic implement of spring rest database for SoftUni cookbook project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic implement of spring rest database for SoftUni cookbook project." />
   </component>
 </project>
