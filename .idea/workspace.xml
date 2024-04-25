@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Basic implement of spring rest database for SoftUni cookbook project.">
-      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/CreateRecipeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI-tests/catalog-tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-tasks/CookBook app tasks.docx" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-tasks/CookBook app tasks.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recipeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipeController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +30,17 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/cookbook-backend">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cookbook-backend" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -37,9 +50,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -102,14 +116,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Batch.server.executor": "Debug",
+    "Batch.server.executor": "Run",
     "Gradle.Build cookbook-backend.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
+    "Gradle.Tests in 'cookbook-backend'.executor": "Run",
     "Gradle.cookbook-backend.executor": "Run",
     "JavaScript Debug.example.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.login.html.executor": "Debug",
     "JavaScript Debug.register.html.executor": "Run",
+    "Mocha.UI tests.executor": "Run",
+    "Mocha.UI tests.should load and render the content of the api.executor": "Run",
+    "Mocha.test\\UI-tests\\catalog-tests.js.executor": "Debug",
     "Node.js.login.js.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -117,10 +135,12 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CookbookBackendApplication.executor": "Run",
-    "git-widget-placeholder": "java-spring-backend",
+    "Spring Boot.CookbookBackendApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
+    "javascript.nodejs.core.library.configured.version": "20.12.1",
+    "javascript.nodejs.core.library.typings.version": "20.12.7",
+    "jdk.selected.JAVA_MODULE": "17",
     "js.last.introduce.type": "CONST",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/SoftUni Repos/JS-Applications/softuni-practice-server-master",
@@ -128,8 +148,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.mocha.mocha_node_package_dir": "E:/SoftUni Repos/Cookbook-SoftUni-Project/node_modules/mocha",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.14941406",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -142,6 +163,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.cookbookbackend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project\static" />
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
@@ -151,7 +175,7 @@
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CookbookBackendApplication">
+  <component name="RunManager" selected="Mocha.test\UI-tests\catalog-tests.js">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -193,52 +217,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cookbook-backend" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/cookbook-backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Cookbook-SoftUni-Project/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Cookbook-SoftUni-Project/login.html" useBuiltInWebServerPort="true">
+    <configuration name="UI tests" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/UI-tests/catalog-tests.js</test-file>
+      <test-names>
+        <name value="UI tests" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="CookbookBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cookbook-backend.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.cookbookbackend.CookbookBackendApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.cookbookbackend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="UI tests.should load and render the content of the api" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/UI-tests/catalog-tests.js</test-file>
+      <test-names>
+        <name value="UI tests" />
+        <name value="should load and render the content of the api" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test\UI-tests\catalog-tests.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/UI-tests/catalog-tests.js</test-file>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CookbookBackendApplication" />
-        <item itemvalue="Batch.server" />
+        <item itemvalue="Mocha.test\UI-tests\catalog-tests.js" />
+        <item itemvalue="Mocha.UI tests.should load and render the content of the api" />
+        <item itemvalue="Mocha.UI tests" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Gradle.cookbook-backend" />
-        <item itemvalue="JavaScript Debug.login.html" />
+        <item itemvalue="Batch.server" />
       </list>
     </recent_temporary>
   </component>
@@ -267,6 +298,9 @@
       <workItem from="1713595208796" duration="1397000" />
       <workItem from="1713598294837" duration="15514000" />
       <workItem from="1713675510730" duration="4505000" />
+      <workItem from="1713691535459" duration="802000" />
+      <workItem from="1713692607539" duration="153000" />
+      <workItem from="1714027464944" duration="2767000" />
     </task>
     <task id="LOCAL-00001" summary="Implement authentication and authorization of adding new recipes to cookbook collection.">
       <option name="closed" value="true" />
@@ -339,5 +373,16 @@
     <MESSAGE value="Some more refactoring and implementing delete recipe functionality." />
     <MESSAGE value="Basic implement of spring rest database for SoftUni cookbook project." />
     <option name="LAST_COMMIT_MESSAGE" value="Basic implement of spring rest database for SoftUni cookbook project." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

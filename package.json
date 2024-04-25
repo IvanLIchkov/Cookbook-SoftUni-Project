@@ -1,18 +1,17 @@
 {
   "name": "js-apps-workshop",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "@types/mocha": "^8.2.0",
+    "chai": "^4.3.4",
     "http-server": "^0.12.3",
     "playwright-chromium": "^1.8.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"dev": "http-server lesson-07/finished -a localhost -p 3000 -P http://localhost:3000?",
-	"server": "server.bat"
+    "test:ui": "npx playwright test",
+    "dev": "http-server lesson-07/finished -a localhost -p 3000 -P http://localhost:3000?",
+    "server": "server.bat"
   },
   "repository": {
     "type": "git",
@@ -24,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/viktorpts/js-apps-workshop/issues"
   },
-  "homepage": "https://github.com/viktorpts/js-apps-workshop#readme"
+  "homepage": "https://github.com/viktorpts/js-apps-workshop#readme",
+  "directories": {
+    "test": "test"
+  },
+  "description": "",
+  "dependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
 }

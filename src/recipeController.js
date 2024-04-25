@@ -12,7 +12,7 @@ export function loadCreateRecipe() {
 async function createNewRecipe(event) {
     event.preventDefault();
 
-    const url = 'http://localhost:3030/data/recipes'
+    const url = 'http://localhost:3030/data/recipes/'
 
     try{
         const response = await fetch(url, generateOptions(event.target));

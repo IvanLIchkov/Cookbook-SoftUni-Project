@@ -22,6 +22,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/api/recipes/").permitAll()
                         .requestMatchers("/api/recipes/").permitAll()
+                        .anyRequest().permitAll()
         ).formLogin(
                 formLogin -> {
                     formLogin
