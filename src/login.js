@@ -17,7 +17,7 @@ async function onLogin({email, password}){
     context.showView('Catalog')
 }
 
-export function onLogOut(){
-    logOut()
+export async function onLogOut(){
+    await logOut()
     context.showView('Catalog');
 }

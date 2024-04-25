@@ -9,9 +9,12 @@ export async function showHome() {
 
     const cards = await createRecipePreview();
     cards.forEach(c => homeSection.appendChild(c));
+
     navBarAuth();
+
     main.replaceChildren(homeSection)
 }
+
 function navBarAuth() {
 
     const userNav =  header.querySelector('#user');
