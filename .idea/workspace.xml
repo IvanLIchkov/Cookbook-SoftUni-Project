@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Basic implement of spring rest database for SoftUni cookbook project.">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UI-tests/catalog-tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" afterDir="false" />
+    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Test implementation.">
+      <change afterPath="$PROJECT_DIR$/src/createRecipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/deleteRecipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generateRecipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/updaterecipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/formUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookbook-tasks/CookBook app tasks.docx" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-tasks/CookBook app tasks.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/homeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recipeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homeController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recipeController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,12 +129,12 @@
     "Gradle.Tests in 'cookbook-backend'.executor": "Run",
     "Gradle.cookbook-backend.executor": "Run",
     "JavaScript Debug.example.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Debug",
     "JavaScript Debug.login.html.executor": "Debug",
     "JavaScript Debug.register.html.executor": "Run",
     "Mocha.UI tests.executor": "Run",
     "Mocha.UI tests.should load and render the content of the api.executor": "Run",
-    "Mocha.test\\UI-tests\\catalog-tests.js.executor": "Debug",
+    "Mocha.test\\UI-tests\\catalog-tests.js.executor": "Run",
     "Node.js.login.js.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -154,6 +161,7 @@
     "project.structure.proportion": "0.14941406",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "E:\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -175,7 +183,7 @@
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.test\UI-tests\catalog-tests.js">
+  <component name="RunManager" selected="Batch.server">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -265,11 +273,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Batch.server" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Mocha.test\UI-tests\catalog-tests.js" />
         <item itemvalue="Mocha.UI tests.should load and render the content of the api" />
         <item itemvalue="Mocha.UI tests" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Batch.server" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +308,7 @@
       <workItem from="1713675510730" duration="4505000" />
       <workItem from="1713691535459" duration="802000" />
       <workItem from="1713692607539" duration="153000" />
-      <workItem from="1714027464944" duration="2767000" />
+      <workItem from="1714027464944" duration="15397000" />
     </task>
     <task id="LOCAL-00001" summary="Implement authentication and authorization of adding new recipes to cookbook collection.">
       <option name="closed" value="true" />
@@ -350,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713606245769</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Test implementation.">
+      <option name="closed" value="true" />
+      <created>1714030621337</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714030621337</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +388,8 @@
     <MESSAGE value="Refactor html and code to be single page app. Implement edit recipe by authenticated user." />
     <MESSAGE value="Some more refactoring and implementing delete recipe functionality." />
     <MESSAGE value="Basic implement of spring rest database for SoftUni cookbook project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic implement of spring rest database for SoftUni cookbook project." />
+    <MESSAGE value="Test implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test implementation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,6 +398,30 @@
           <url>file://$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java</url>
           <line>47</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/data/api.js</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/login.js</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/createRecipe.js</url>
+          <line>16</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/data/data.js</url>
+          <line>8</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

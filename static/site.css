@@ -62,5 +62,5 @@ a.active {
 }
 
 #guest {
-    display: none;
+    display: inline-block;
 }

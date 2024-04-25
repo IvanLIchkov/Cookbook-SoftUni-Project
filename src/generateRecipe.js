@@ -1,37 +1,15 @@
-import {main} from "./app.js";
-import{header} from "./app.js";
+import {getRecipeById, getRecipes} from "./data/data.js";
 import {createElement} from "../util/createHtmlElement.js";
-import {deleteRecipe, insertDataIntoForm} from "./recipeController.js";
+import {showUpdate} from "./updaterecipe.js";
+import {onDeleteRecipe} from "./deleteRecipe.js";
 
-const homeSection = document.getElementById('showMyRecipes');
+export async function createRecipePreview() {
+    const recipes = await getRecipes()
 
-export async function loadHome() {
-    homeSection.innerHTML = ''
-    const recipes = await getRecipes();
-
-    const cards = recipes.map(createRecipePreview);
-    cards.forEach(c => homeSection.appendChild(c));
-    navBarAuth();
-    main.replaceChildren(homeSection)
-}
-async function getRecipes() {
-    const response = await fetch('http://localhost:3030/data/recipes/');
-    const recipes = await response.json();
-
-    return Object.values(recipes);
-}
-
-export async function getRecipeById(id) {
-    const response = await fetch('http://localhost:3030/data/recipes/' + id);
-    const recipe = await response.json();
-
-    return recipe;
-}
-
-function createRecipePreview(recipe) {
-    const result = e('article', { className: 'preview', onClick: toggleCard },
-        e('div', { className: 'title' }, e('h2', {}, recipe.name)),
-        e('div', { className: 'small' }, e('img', { src: recipe.img })),
+    return recipes.map(recipe => {
+    const result = e('article', {className: 'preview', onClick: toggleCard},
+        e('div', {className: 'title'}, e('h2', {}, recipe.name)),
+        e('div', {className: 'small'}, e('img', {src: recipe.img})),
     );
 
     return result;
@@ -41,6 +19,7 @@ function createRecipePreview(recipe) {
 
         result.replaceWith(await createRecipeCard(fullRecipe));
     }
+});
 }
 
 async function createRecipeCard(recipe) {
@@ -66,10 +45,10 @@ async function createRecipeCard(recipe) {
         const buttonsSection = createElement('div', descriptionSection,null,null,'buttonsSection', {'recipe-id': `${recipe._id}`});
 
         const editBtn = createElement('button',buttonsSection,'<i class="fa-solid fa-pen"></i> Edit', null, null, null, true);
-        editBtn.addEventListener('click', insertDataIntoForm);
+        editBtn.addEventListener('click', showUpdate);
 
         const deleteBtn = createElement('button',buttonsSection,'<i class="fa-light fa-x"></i> Delete', null, null,null, true);
-        deleteBtn.addEventListener('click', deleteRecipe)
+        deleteBtn.addEventListener('click', onDeleteRecipe)
     }
     return result;
 }
@@ -99,19 +78,3 @@ function e(type, attributes, ...content) {
 
     return result;
 }
-function navBarAuth() {
-
-    const userNav =  header.querySelector('#user');
-    const guestNav =  header.querySelector('#guest');
-
-    const accessToken = sessionStorage.getItem('accessToken');
-    if (sessionStorage.getItem('accessToken')!== null){
-        header.querySelector('#user').style.display = 'inline-block'
-        header.querySelector('#guest').style.display = 'none'
-
-    }else{
-        header.querySelector('#user').style.display = 'none'
-        header.querySelector('#guest').style.display = 'inline-block'
-}
-}
-
