@@ -18,8 +18,26 @@ header {
 }
 
 h1 {
-    font-size: 150%;
+    font-size: 32px;
+    line-height: 32px;
+    vertical-align: bottom;
     display: inline;
+}
+
+h1 img {
+    height: 32px;
+    vertical-align: bottom;
+    margin-right: 8px;
+}
+
+h1 a {
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+}
+
+h1 a:visited {
+    color: black;
 }
 
 main {
@@ -47,6 +65,10 @@ nav a {
     color: black;
 }
 
+nav a:visited {
+    color: black;
+}
+
 nav a:hover {
     background-color: #6c8b47;
     color: white;
@@ -62,5 +84,81 @@ a.active {
 }
 
 #guest {
-    display: inline-block;
+    display: none;
+}
+
+#views {
+    display: block;
+}
+
+.hero {
+    display: block;
+    width: 850px;
+    margin: 32px auto 32px auto;
+    background-color: #cccccc;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 32px;
+}
+
+.section-title {
+    display: block;
+    width: 850px;
+    margin: 32px auto 32px auto;
+    background-color: #cccccc;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 16px 32px;
+}
+
+a {
+    color: #40522a;
+}
+
+a:visited {
+    color: #40522a;
+}
+
+.pager {
+    margin: 0 8px;
+}
+
+.recent-recipes ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.recent-recipes ul li{
+   display: inline-block;
+}
+
+.recent-recipe-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+
+}
+.recent-recipe-card p{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #cccccc;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px ;
+    font-size: 20px;
+    font-weight: bold;
+}
+.recent-recipe-img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 250px;
+    height: 170px;
+    float: left;
+    background: white;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.recent-recipe-img>img{
+    width: 210px;
+    height: 135px;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
 }

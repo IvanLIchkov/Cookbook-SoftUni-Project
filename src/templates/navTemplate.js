@@ -3,7 +3,7 @@ import {context} from "../app.js";
 
 
 export const navTemplate = (sessionStorage) => html`
-	<h1>My Cookbook</h1>
+	<h1><a href="/"><img src="./assets/logo.png" alt="book logo pic"></i> My Cookbook</a></h1>
 		<nav @click="${(event) => controlNavMenu(event)}">
 			<a>Catalog</a>
 			<div>

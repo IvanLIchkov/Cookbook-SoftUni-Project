@@ -21,7 +21,8 @@ const templatePreviewRecipe = (recipe)  => html`
         <div class="band">
             <div class="thumb">
                 <img src="${recipe.img}">
-            </div><div class="ingredients">
+            </div>
+			<div class="ingredients">
             <h3>Ingredients:</h3>
             <ul>
                 ${recipe.ingredients.map(i => html`<li>${i}</li>`)}
