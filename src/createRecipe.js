@@ -1,21 +1,15 @@
-import {main} from "./app.js";
-import {addSubmitListener} from "./util/formUtil.js";
+import {context, main} from "./app.js";
 import {createRecipe} from "./data/data.js";
+import {createRecipeTemplate} from "./templates/createRecipe.js";
+import {loadRecipes, updateRecipes} from "./generateRecipe.js";
 
-const createRecipeSection = document.getElementById('createRecipe');
-const createRecipeForm = createRecipeSection.querySelector('form');
 
-addSubmitListener(createRecipeForm,onCreateRecipe);
-
-let context = null;
-
-export function showCreateRecipe(newContext) {
-    main.replaceChildren(createRecipeSection);
-    context = newContext;
+export async function showCreateRecipe() {
+    context.render(createRecipeTemplate);
 }
 
-async function onCreateRecipe({name, img, ingredients, steps}) {
+export async function onCreateRecipe({name, img, ingredients, steps}) {
     await createRecipe(name, img, ingredients, steps)
-    createRecipeForm.reset()
-    context.showView('Catalog');
+    await updateRecipes();
+    await loadRecipes()
 }

@@ -1,12 +1,7 @@
-package org.example.cookbookbackend.model;
+package org.example.cookbookbackend.model.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.annotations.Type;
 
-import java.sql.Types;
 import java.util.UUID;
 
 @MappedSuperclass

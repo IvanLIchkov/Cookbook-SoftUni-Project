@@ -1,7 +1,7 @@
 package org.example.cookbookbackend.service;
 
-import org.example.cookbookbackend.model.RecipeEntity;
-import org.example.cookbookbackend.model.UserEntity;
+import org.example.cookbookbackend.model.domain.RecipeEntity;
+import org.example.cookbookbackend.model.domain.UserEntity;
 import org.example.cookbookbackend.model.dto.RecipeDto;
 import org.example.cookbookbackend.repository.RecipeRepository;
 import org.springframework.stereotype.Service;

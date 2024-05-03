@@ -4,25 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="Test implementation.">
-      <change afterPath="$PROJECT_DIR$/src/createRecipe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/deleteRecipe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generateRecipe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/updaterecipe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/formUtil.js" afterDir="false" />
+    <list default="true" id="579e21c9-3265-492e-9a8c-ae87c6fa96dc" name="Changes" comment="CookBook backend JWT access token implementation.">
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/ApplicationConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/AppUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/UserRegisterDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/response/RegisterResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/ApplicationUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loadRecipeForUpdate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/catalogTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/createRecipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/loginTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/navTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/registerTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/updateRecipeTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/utilForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ui/catalog.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23cf1f55-923b-4032-89bf-48700df977c0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/domain/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/RecipeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/domain/RecipeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/domain/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/model/dto/RegisterUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/repository/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/repository/RecipeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/RecipeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-tasks/CookBook app tasks.docx" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook-tasks/CookBook app tasks.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook-tasks/~$okBook app tasks.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/authController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homeController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recipeController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createRecipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deleteRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/deleteRecipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generateRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/generateRecipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/updaterecipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/formUtil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI-tests/catalog-tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/createHtmlElement.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +93,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -121,55 +156,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Batch.server.executor": "Run",
-    "Gradle.Build cookbook-backend.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.Tests in 'cookbook-backend'.executor": "Run",
-    "Gradle.cookbook-backend.executor": "Run",
-    "JavaScript Debug.example.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Debug",
-    "JavaScript Debug.login.html.executor": "Debug",
-    "JavaScript Debug.register.html.executor": "Run",
-    "Mocha.UI tests.executor": "Run",
-    "Mocha.UI tests.should load and render the content of the api.executor": "Run",
-    "Mocha.test\\UI-tests\\catalog-tests.js.executor": "Run",
-    "Node.js.login.js.executor": "Debug",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CookbookBackendApplication.executor": "Debug",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.12.1",
-    "javascript.nodejs.core.library.typings.version": "20.12.7",
-    "jdk.selected.JAVA_MODULE": "17",
-    "js.last.introduce.type": "CONST",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/SoftUni Repos/JS-Applications/softuni-practice-server-master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.mocha.mocha_node_package_dir": "E:/SoftUni Repos/Cookbook-SoftUni-Project/node_modules/mocha",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.14941406",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "E:\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Batch.server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build cookbook-backend.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'cookbook-backend'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.cookbook-backend.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.example.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.E2E tests.Cats.Testing status button functionality for showing code.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.UI tests.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.UI tests.should load and render the content of the api.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.UI tests.should show recipe titles on the Catalog page (1).executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.UI tests.should show recipe titles on the Catalog page.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.UI tests.test.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.test\\UI-tests\\catalog-tests.js.executor&quot;: &quot;Run&quot;,
+    &quot;Mocha.test\\ui\\catalog.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.login.js.executor&quot;: &quot;Debug&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CookbookBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.7&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/SoftUni Repos/Cookbook-SoftUni-Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.mocha.mocha_node_package_dir&quot;: &quot;E:/SoftUni Repos/Cookbook-SoftUni-Project/node_modules/mocha&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.14941406&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.cookbookbackend" />
@@ -179,11 +221,12 @@
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project\src\util" />
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project\cookbook-tasks" />
       <recent name="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
     </key>
   </component>
-  <component name="RunManager" selected="Batch.server">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -217,7 +260,7 @@
     <configuration name="server" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="Cookbook-SoftUni-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="E:\SoftUni Repos\Cookbook-SoftUni-Project" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="server.bat" />
       <option name="PARAMETERS" value="" />
@@ -225,7 +268,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Cookbook-SoftUni-Project/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/formUtil.js/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="CookbookBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cookbook-backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.cookbookbackend.CookbookBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E2E tests.Cats.Testing status button functionality for showing code" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/ui/catalog.test.js</test-file>
+      <test-names>
+        <name value="E2E tests" />
+        <name value="Cats" />
+        <name value="Testing status button functionality for showing code" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="UI tests" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -237,29 +304,13 @@
       <ui>bdd</ui>
       <extra-mocha-options />
       <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/test/UI-tests/catalog-tests.js</test-file>
+      <test-file>$PROJECT_DIR$/test/ui/catalog.test.js</test-file>
       <test-names>
         <name value="UI tests" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="UI tests.should load and render the content of the api" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/UI-tests/catalog-tests.js</test-file>
-      <test-names>
-        <name value="UI tests" />
-        <name value="should load and render the content of the api" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="test\UI-tests\catalog-tests.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="test\ui\catalog.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -268,15 +319,15 @@
       <ui>bdd</ui>
       <extra-mocha-options />
       <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/UI-tests/catalog-tests.js</test-file>
+      <test-file>$PROJECT_DIR$/test/ui/catalog.test.js</test-file>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="Batch.server" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Mocha.test\UI-tests\catalog-tests.js" />
-        <item itemvalue="Mocha.UI tests.should load and render the content of the api" />
+        <item itemvalue="Mocha.test\ui\catalog.test.js" />
+        <item itemvalue="Mocha.E2E tests.Cats.Testing status button functionality for showing code" />
         <item itemvalue="Mocha.UI tests" />
       </list>
     </recent_temporary>
@@ -308,7 +359,19 @@
       <workItem from="1713675510730" duration="4505000" />
       <workItem from="1713691535459" duration="802000" />
       <workItem from="1713692607539" duration="153000" />
-      <workItem from="1714027464944" duration="15397000" />
+      <workItem from="1714027464944" duration="15911000" />
+      <workItem from="1714050100001" duration="15000" />
+      <workItem from="1714057758483" duration="293000" />
+      <workItem from="1714200249964" duration="9087000" />
+      <workItem from="1714286218865" duration="8925000" />
+      <workItem from="1714304536704" duration="7520000" />
+      <workItem from="1714549317313" duration="599000" />
+      <workItem from="1714562625826" duration="1852000" />
+      <workItem from="1714574144788" duration="6807000" />
+      <workItem from="1714634648000" duration="12087000" />
+      <workItem from="1714713287634" duration="11311000" />
+      <workItem from="1714739266745" duration="62000" />
+      <workItem from="1714739337929" duration="4389000" />
     </task>
     <task id="LOCAL-00001" summary="Implement authentication and authorization of adding new recipes to cookbook collection.">
       <option name="closed" value="true" />
@@ -366,7 +429,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714030621337</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactor code.">
+      <option name="closed" value="true" />
+      <created>1714049813719</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714049813719</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor code.">
+      <option name="closed" value="true" />
+      <created>1714049900283</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714049900283</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,41 +468,19 @@
     <MESSAGE value="Some more refactoring and implementing delete recipe functionality." />
     <MESSAGE value="Basic implement of spring rest database for SoftUni cookbook project." />
     <MESSAGE value="Test implementation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test implementation." />
+    <MESSAGE value="Refactor code." />
+    <MESSAGE value="CookBook backend JWT access token implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="CookBook backend JWT access token implementation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cookbook-backend/src/main/java/org/example/cookbookbackend/web/RecipeController.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data/api.js</url>
-          <line>2</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/login.js</url>
-          <line>19</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/createRecipe.js</url>
-          <line>16</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data/data.js</url>
-          <line>8</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>

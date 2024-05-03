@@ -1,4 +1,4 @@
-package org.example.cookbookbackend.model;
+package org.example.cookbookbackend.model.domain;
 
 import jakarta.persistence.*;
 

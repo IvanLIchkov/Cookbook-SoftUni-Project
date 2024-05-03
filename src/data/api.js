@@ -30,7 +30,7 @@ async function request(method, url, data){
         if (response.status !== 204){
             result = await response.json();
         }
-        if (result.ok === false){
+        if (response.ok === false){
             if (response.status === 403){
                 sessionStorage.removeItem('accessToken');
             }

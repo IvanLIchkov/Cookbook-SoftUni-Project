@@ -1,4 +1,4 @@
-import {post} from "./api.js";
+import {get, post} from "./api.js";
 
 export async function login(email, password) {
     const userDataResponse = await post('/users/login', {email, password});
@@ -15,7 +15,8 @@ function setSessionItems(userData) {
     sessionStorage.setItem('userId', userData._id)
 }
 
-export function logOut(){
+export async function logOut(){
+    await get('/users/logout')
     sessionStorage.clear();
 }
 
